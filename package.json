@@ -1,6 +1,6 @@
 {
   "name": "yarn-add-webpack-plugin",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Automatically add packages to Webpack using Yarn",
   "main": "index.js",
   "engines": {
@@ -58,7 +58,6 @@
     "eslint-config-boldr": "^0.11.1",
     "expect": "^1.20.2",
     "husky": "^0.14.3",
-    "jest": "^20.0.4",
     "lint-staged": "^4.0.1",
     "mocha": "^3.4.2",
     "nyc": "^11.0.3",

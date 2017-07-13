@@ -4,28 +4,6 @@ const webpack = require('webpack');
 const installer = require('./installer');
 const normalizeLoader = require('./normalizeLoader');
 
-const extractDepFromError = err => {
-  if (!err) {
-    return undefined;
-  }
-
-  /**
-   * Supported package formats:
-   * - path
-   * - react-lite
-   * - @boldr/ui
-   * - material-ui/Drawer/Drawer
-   * - lodash.random
-   */
-  const matches = /(?:(?:Cannot resolve module)|(?:Can't resolve)) '([@\w\\.-]+)' in/.exec(err);
-
-  if (!matches) {
-    return undefined;
-  }
-
-  return matches[1];
-};
-
 class YarnAddWebpackPlugin {
   constructor(options) {
     this.preCompiler = null;
@@ -186,5 +164,18 @@ class YarnAddWebpackPlugin {
     });
   }
 }
+
+const extractDepFromError = err => {
+  if (!err) {
+    return undefined;
+  }
+  const matches = /(?:(?:Cannot resolve module)|(?:Can't resolve)) '([@\w\\.-]+)' in/.exec(err);
+
+  if (!matches) {
+    return undefined;
+  }
+
+  return matches[1];
+};
 
 module.exports = YarnAddWebpackPlugin;

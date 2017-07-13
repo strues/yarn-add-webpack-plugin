@@ -1,0 +1,27 @@
+language: node_js
+dist: trusty
+node_js:
+  - 8.1
+  - 7
+  - 6
+
+sudo: false
+notifications:
+  email: false
+script:
+  - node --version
+  - yarn --version
+  - yarn run test
+
+after_success:
+  - yarn global add codecov
+  - codecov
+branches:
+  only:
+    - master
+cache:
+  yarn: true
+  directories:
+    - "node_modules"
+notifications:
+  email: false

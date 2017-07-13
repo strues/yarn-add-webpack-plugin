@@ -1,0 +1,7 @@
+.babelrc
+.eslintrc
+.nyc_output
+coverage
+example
+node_modules
+test

@@ -14,8 +14,8 @@ script:
   - yarn run test
 
 after_success:
-  - yarn global add codecov
-  - codecov
+  - curl -s https://codecov.io/bash | bash
+
 branches:
   only:
     - master

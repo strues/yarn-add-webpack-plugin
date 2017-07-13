@@ -1,0 +1,14 @@
+{
+  "plugins": [
+    "react-html-attrs"
+  ],
+  "presets": [
+    "react",
+    ["env", {"modules": false}],
+  ],
+  "env": {
+    "development": {
+      "presets": ["react-hmre"]
+    }
+  }
+}

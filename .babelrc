@@ -1,0 +1,11 @@
+{
+  "presets": [
+    ["env", {
+      "modules": "commonjs",
+      "useBuiltins": true,
+      "targets": {
+        "node": 6
+      }
+    }]
+  ]
+}

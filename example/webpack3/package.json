@@ -1,0 +1,12 @@
+{
+  "private": true,
+  "devDependencies": {
+    "reload-server-webpack-plugin": "1.0.1",
+    "webpack": "^3.2.0"
+  },
+  "scripts": {
+    "link": "(cd .. && yarn link .) && yarn link yarn-add-webpack-plugin",
+    "postinstall": "yarn link",
+    "start": "webpack --config webpack.config.server.js --watch"
+  }
+}

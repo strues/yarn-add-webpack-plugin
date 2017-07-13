@@ -4,6 +4,7 @@
 
 # yarn-add-webpack-plugin
 
+[![Build Status](https://travis-ci.org/strues/yarn-add-webpack-plugin.svg?branch=master)](https://travis-ci.org/strues/yarn-add-webpack-plugin) [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
 Allows packages to be installed using Yarn during development. Webpack wont error for any missing dependencies, rather, the missing packages are installed without skipping a beat.
 

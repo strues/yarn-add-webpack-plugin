@@ -9,13 +9,17 @@
 Allows packages to be installed using Yarn during development. Webpack wont error for any missing dependencies, rather, the missing packages are installed without skipping a beat.
 
 
-This plugin is heavily based off of [`npm-install-webpack-plugin`](https://github.com/webpack-contrib/npm-install-webpack-plugin). npm-install-webpack-plugin doesn't support Yarn and there are no plans to at this time.
+This plugin borrows heavily from the [`npm-install-webpack-plugin`](https://github.com/webpack-contrib/npm-install-webpack-plugin). npm-install-webpack-plugin doesn't support Yarn at the moment (or ever?).
 
 There are **no** plans to support NPM. There's already a nice plugin for that :)
+
+
 
 ### Usage
 
 ```javascript
+const YarnAddWebpackPlugin = require('yarn-add-webpack-plugin');
+///
   plugins: [
   new YarnAddWebpackPlugin({
     // save dependencies as development or regular dependencies.
